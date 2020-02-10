@@ -45,8 +45,20 @@ public class LoopFun
        *  'y' => 'b'
        * @param word
        * @return the encrypted string by shifting each character by three character
+       * 
+       * 
        */
       public String encrypt(String word) {
-          return null;
+          StringBuilder encrypt = new StringBuilder ();
+          for (int i = 0; i < word.length() ; i++) {
+              char letter = word.charAt(i);
+              if ( letter == 'x' || letter == 'y' || letter == 'z') {
+                  letter -= 26;
+              }
+              letter += 3;
+              encrypt.append(letter);
+          }
+          return encrypt.toString();
       }
+      
 }

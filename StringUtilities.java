@@ -24,7 +24,7 @@ public class StringUtilities {
     public String reverse(String valueToBeReversed) {
         String reverse = "";
         for(int i = valueToBeReversed.length() - 1; i >= 0; i--) {
-            reverse = reverse + valueToBeReversed.charAt(i);
+            reverse += valueToBeReversed.charAt(i);
         }
         return reverse;
     }
