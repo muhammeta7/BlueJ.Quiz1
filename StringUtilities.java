@@ -34,8 +34,7 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        int middle = word.length()/2;
-        char removeMiddle = word.charAt(middle);
+        char removeMiddle = word.charAt( word.length() / 2 );
         return removeMiddle;
     }
 
@@ -45,8 +44,8 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        String getChar = String.valueOf(charToRemove);
-        String modifiedWord = value.replace(getChar, "");
+        String getChar = String.valueOf( charToRemove );
+        String modifiedWord = value.replace( getChar, "" );
         return modifiedWord;
     }
 
@@ -55,7 +54,6 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        String lastWord = sentence.substring (sentence.lastIndexOf(" ")+1);
-        return lastWord;
+        return sentence.substring ( sentence.lastIndexOf(" ") + 1 );
     }
 }

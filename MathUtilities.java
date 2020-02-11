@@ -37,11 +37,13 @@ public class MathUtilities{
    * @return true if the number is odd, false if it is even
    */
   public Boolean isOdd(Integer number){
-      if ( number % 2 == 1) {
+      return number % 2 == 1 ? true : false;
+      /*if ( number % 2 == 1) {
           return true;
       } else {
           return false;
       }
+      */
   }
 
 

@@ -11,7 +11,7 @@ public class LoopFun
        */
       public Integer factorial(Integer number){
           int sum = 1;
-          for (int i = 2; i <= number  ; i++) {
+          for ( int i = 2; i <= number; i++ ) {
               sum *= i;
           }
           return sum;
@@ -25,13 +25,16 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          StringBuilder acronym = new StringBuilder();
-          String newPhrase = phrase.replace("-", " ");
-          String[] words = newPhrase.split(" ");
+          //StringBuilder acronym = new StringBuilder();
+          String acronym = "";
+          String[] words = phrase.split(" ");
           for (String word : words) {
-	    acronym.append(word.charAt(0));
+            //System.out.println(word);
+	    //acronym.append(word.charAt(0));
+	    acronym += word.charAt(0);
 	  }
-	  return acronym.toString().toUpperCase();
+	  //return acronym.toString().toUpperCase();
+	  return acronym.toUpperCase();
       }
 
       /**
@@ -47,18 +50,18 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        * 
        * 
-       */
+       */ 
       public String encrypt(String word) {
-          StringBuilder encrypt = new StringBuilder ();
-          for (int i = 0; i < word.length() ; i++) {
+          // StringBuilder encrypt = new StringBuilder();
+          String encrypt = "";
+          for (int i = 0; i < word.length(); i++) {
               char letter = word.charAt(i);
               if ( letter == 'x' || letter == 'y' || letter == 'z') {
                   letter -= 26;
               }
               letter += 3;
-              encrypt.append(letter);
+              encrypt += letter;
           }
-          return encrypt.toString();
+          return encrypt;
       }
-      
 }
